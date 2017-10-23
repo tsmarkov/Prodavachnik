@@ -164,5 +164,10 @@ function startApp() {
             }
         }
     }
+<<<<<<< HEAD
 }
 
+=======
+
+}
+>>>>>>> 4fe39cf... fixed a major bug
