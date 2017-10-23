@@ -5,14 +5,14 @@ function startApp() {
     // Bind the navigation menu links
     $("#linkHome").click(showHomeView);
     $("#linkLogin").click(showLoginView);
-    $("#linkRegister").click(showRegisterView);  
-    $("#linkListAds").click(listAdverts);  
+    $("#linkRegister").click(showRegisterView);
+    $("#linkListAds").click(listAdverts);
     $("#linkLogout").click(logoutUser);
 
     // Bind the form submit buttons
     $("#buttonLoginUser").click(loginUser);
     $("#buttonRegisterUser").click(registerUser);
-    
+
     const kinveyBaseUrl = "https://mock.api.com/";
     const kinveyAppKey = "kid_rk";
     const kinveyAppSecret = "736804a668";
@@ -22,8 +22,8 @@ function startApp() {
         $('main > section').hide();
         $('#' + viewName).show();
     }
-    
-     function showHideMenuLinks() {
+
+    function showHideMenuLinks() {
         $("#linkHome").show();
         if (sessionStorage.getItem('authToken') === null) {
             // No logged in user
@@ -53,10 +53,10 @@ function startApp() {
         $('#formRegister').trigger('reset');
         showView('viewRegister');
     }
-    
+
     // user/login
     function loginUser() {
-        const kinveyLoginUrl =  kinveyBaseUrl + "user/" + kinveyAppKey + "/login";
+        const kinveyLoginUrl = kinveyBaseUrl + "user/" + kinveyAppKey + "/login";
         const kinveyAuthHeaders = {
             'Authorization': "Basic " + btoa(kinveyAppKey + ":" + kinveyAppSecret),
         };
@@ -91,7 +91,7 @@ function startApp() {
     function registerUser() {
         const kinveyRegisterUrl = kinveyBaseUrl + "user/" + kinveyAppKey + "/";
         const kinveyAuthHeaders = {
-            'Authorization':  "Basic " + btoa(kinveyAppKey + ":" + kinveyAppSecret),
+            'Authorization': "Basic " + btoa(kinveyAppKey + ":" + kinveyAppSecret),
         };
 
         let userData = {
@@ -123,7 +123,7 @@ function startApp() {
         showHomeView();
     }
 
-   // advertisement/all
+    // advertisement/all
     function listAdverts() {
         $('#ads').empty();
         showView('viewAds');
@@ -164,5 +164,5 @@ function startApp() {
             }
         }
     }
-}
+
 }
