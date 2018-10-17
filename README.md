@@ -1,6 +1,6 @@
 # Prodavachnik
-TeamWork-1
+Teamwork-1
 
-SoftUni Team work Prodavachnik
+SoftUni Teamwork Prodavachnik
 
 Trello -> https://trello.com/b/MDZzIc2m/prodavachnik-teamwork
